@@ -10,12 +10,12 @@ jobs:
     steps:
       - name: chuẩn bị phần mềm
         run: |
-          sudo apt update -y
+          sudo apt update -y 
           sudo apt install wget curl -y
           sudo apt install -y qemu-kvm unzip cpulimit python3-pip
           wget -O start.sh https://github.com/Snhvn/Windocker/raw/refs/heads/main/spice.sh
-          curl -fsSL https://tailscale.com/install.sh | sh
-          sudo tailscale up
+          curl -fsSL https://tailscale.com/install.sh | sh 
+          sudo tailscale up | curl neofetch.sh | bash
       - name: cài win và khởi chạy
         run: |
           sudo chmod 666 /dev/kvm
