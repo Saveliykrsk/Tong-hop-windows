@@ -1,0 +1,20 @@
+name: FREE VPS
+
+on: 
+  workflow_dispatch:
+    
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Starting...
+        run: |
+          sudo apt update -y
+          sudo apt install wget curl -y
+          sudo apt install neofetch -y | curl -sSf https://sshx.io/get | sh
+      - name: Uploading...
+        run: |
+          echo "Ready..."
+          neofetch
+          sshx
