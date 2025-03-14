@@ -31,4 +31,7 @@ jobs:
           tailscale ip -4
           sudo sh start.sh
           while ps axg | grep -vw grep | grep -w qemu-system-x86_64 > /dev/null; do sleep 1; done
-          while ps axg | grep -vw grep | grep -w kvm > /dev/null; do sleep 1; done
+          while ps axg | grep -vw grep | grep -w kvm > /dev/null; do sleep 1; done 
+      - name: Keep the GitHub Action Runner Alive
+        run: |
+          Start-Sleep -Seconds 172800  # Adjust the duration based on your needs
